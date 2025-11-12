@@ -266,3 +266,9 @@ TSWLatexianTemp*
 
 # macOS
 .DS_Store
+
+# lilypond
+tmp-ly/
+
+# gregorio
+tmp-gre/
