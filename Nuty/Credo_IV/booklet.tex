@@ -1,0 +1,25 @@
+%! TeX program = lualatex
+%! TEX options = -synctex=1 -interaction=nonstopmode -file-line-error --shell-escape "%DOC%"
+\documentclass{article}
+\usepackage[a4paper,landscape,margin=0pt]{geometry}
+\usepackage{pdfpages}
+
+\begin{document}
+
+\includepdf[
+  pages=1,
+  doublepages=true,
+  nup=2x1,
+  frame=false,
+  delta=0 0,
+]{credo_iv.pdf}
+
+\includepdf[
+  pages=2,
+  doublepages=true,
+  nup=2x1,
+  frame=false,
+  delta=0 0,
+]{credo_iv.pdf}
+
+\end{document}

@@ -1,0 +1,38 @@
+%! TeX program = lualatex
+%! TEX options = -synctex=1 -interaction=nonstopmode -file-line-error --shell-escape "%DOC%"
+\documentclass[10pt,a5paper]{article}
+
+\usepackage[autocompile]{gregoriotex}
+\usepackage[T1]{polski}
+\usepackage[osf]{libertine}
+\usepackage[twoside, 
+				a5paper,
+				top=1.5cm, bottom=1.5cm, left = 1.0cm, right=1.0cm, 
+				bindingoffset=0cm]{geometry}
+\usepackage{graphicx}
+\usepackage{titlesec} 
+\usepackage{color}
+\usepackage[hidelinks]{hyperref}
+\usepackage{paracol}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+\usepackage{pgfornament}
+\usepackage[autocompile]{gregoriotex}
+\usepackage{afterpage}
+\usepackage{pifont}
+\usepackage[all]{nowidow}
+\newcommand{\textjuni}[1]{{\fontspec{Junicode-Regular}#1}}
+
+\begin{document}
+
+\pagestyle{empty}
+
+\begin{center}
+\textjuni{\LARGE{Credo IV}}
+\end{center}
+
+% \grecommentary[0.15cm]{Credo IV}
+\gregorioscore{ky--credo_iv--solesmes.1.gabc}
+
+
+\end{document}
