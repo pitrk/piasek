@@ -21,6 +21,7 @@
 \RequirePackage{pifont}
 \RequirePackage[all]{nowidow}
 \RequirePackage{lyluatex}
+\RequirePackage{lettrine}
 
 \renewcommand{\footrulewidth}{1pt}
 
@@ -147,6 +148,7 @@
   \textbf{\textcolor{\kol}{ #1}}%
   \medskip
 }
+\newcommand{\initial}[2]{\lettrine[lines=3]{#1}{\bfseries #2}}
 
 \widowpenalty10000
 \clubpenalty10000
