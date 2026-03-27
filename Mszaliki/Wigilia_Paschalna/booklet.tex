@@ -1,0 +1,16 @@
+%! TeX program = lualatex
+%! TEX options = -synctex=1 -interaction=nonstopmode -file-line-error --shell-escape "%DOC%"
+\documentclass[12pt]{article}
+\usepackage[a4paper]{geometry}
+\usepackage{pdfpages}
+
+\includepdfset{pages=-}
+
+%\author{N.~N}
+%\title{The booklet}
+
+\begin{document}
+
+\includepdf[pages=-,nup=2x1,landscape,signature=36, delta=0 0,frame=false]{wigilia_paschalna.pdf}
+
+\end{document}
