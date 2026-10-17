@@ -1,0 +1,571 @@
+%! TeX program = lualatex
+%! TEX options = -synctex=1 -interaction=nonstopmode -file-line-error --shell-escape "%DOC%"
+\documentclass[10pt,a5paper]{mszalik}
+
+\begin{document}
+
+\thispagestyle{empty}
+
+\begin{center}
+	\vspace*{0.5cm}
+
+
+	\bfseries\scshape
+	\huge NIESZPORY LUDOWE
+
+    \vspace*{0.5cm}
+
+    \huge NIEDZIELA CHRYSTUSA KRÓLA
+
+    \vspace*{0.5cm}
+
+	\vfill
+
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.45\linewidth]{logo.png}
+	\end{figure}
+
+	\vfill
+
+    \vspace*{0.5cm}
+
+    % {\large \textbf{25 października 2026}}
+
+    % \bigskip
+
+    {\large Kolegiata Świętego Krzyża, Wrocław}
+
+\end{center}
+
+\newpage
+
+\vspace*{2cm}
+
+\vspace*{\fill}
+
+\hrulefill
+
+{\footnotesize
+
+    Śpiewy i teksty liturgiczne oraz ich tłumaczenia pochodzą z:
+
+	\begin{itemize}[leftmargin=*]
+		\item \textit{ks. Bronisław Gładysz -- Hymny brewjarza rzymskiego oraz patronału polskiego: przekład i objaśnienia} (1933),
+        \item \textit{o. Gaspar Lefebvre -- Mszał Rzymski z dodaniem Nabożeństw Nieszpornych} (1949),
+        \item \textit{Liber Usualis} (1961),
+        \item \textit{ks. Antoni Reginek -- Wybór pieśni nabożnych Franciszka Karpińskiego oraz psalmów w jego tłumaczeniu} (2001),
+        \item \textit{ks. Jan Siedlecki -- Śpiewnik kościelny, wydanie XLI} (2021),
+	\end{itemize}
+
+	W niektórych przypadkach wykorzystano cyfrową wersję tekstów
+	opublikowaną na portalach \textit{sbc.org.pl}, \textit{divinumofficium.com} i \textit{missalemeum.com}.
+
+    \medskip
+
+    Zapis gabc neumów: Piotr Matuszak; Andrew Hinkley, Felipe Gasper \textit{gregobase.selapa.net}.
+
+	\medskip
+
+    Duszpasterstwo Wiernych Tradycji Łacińskiej w Archidiecezji Wrocławskiej jest duszpasterstwem
+    erygowanym przez J.E. ks. abp. Józefa Kupnego, Metropolitę Wrocławskiego.
+
+	\bigskip
+
+	Opracowanie: Mateusz Burszewski, Piotr Matuszak\\
+	Skład i łamanie: Michał Siemaszko, Piotr Matuszak\\
+
+	\texttt{tradycja.archidiecezja.wroc.pl}
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+
+\fancyhead[CE]{II. VESPERÆ}
+\fancyhead[CO]{DOMINI NOSTRI IESU CHRISTI REGIS}
+
+\section{NIESZPORY LUDOWE}
+
+\rubric{Kapłan i najbliższa asysta przyklękają przed ołtarzem. Klękają i modlą się w ciszy po czym wstają i przechodzą do sedili.}
+
+
+\gresetinitiallines{0}
+\gregorioscore{Melody/boze-wejrzyj.gabc}
+\gresetinitiallines{1}
+
+\medskip
+
+Chwała bądź Bogu w Trójcy \textbf{je}dynemu: \redcol{*} Ojcu, Synowi, Ducho\textit{wi} Świętemu. \\
+Jak od początku była, \textbf{tak} i ninie, \redcol{*} I na wiek wieków niechaj \textit{zaw}sze słynie. \\
+Alleluja.
+
+\proroctwo{Antyfona}
+
+\gregorioscore{Melody/an--pacificus_vocabitur--solesmes_1961.1.gabc}
+
+\medskip
+Książeciem pokoju nazwany będzie, a stolica Jego będzie umocniona na wieki.
+
+\proroctwo{Psalm 109}
+
+\begin{lilypond}
+\relative c' {
+    \key f \major
+    \clef treble
+    \override Staff.TimeSignature.stencil = ##f
+    \override Staff.NoteHead.style = #'altdefault
+    \cadenzaOn
+    a'\breve bes8 a8 \parenthesize a8 g8 a4 \bar "|" \break
+    g\breve a8 \parenthesize a8 g8 f8 bes8([a8]) g4 \bar "||"
+    \cadenzaOff
+}
+\addlyrics {
+    \override LyricText.font-size = #-1
+    Rzekł_Pan_do_Pana_ \markup { \bold me } -- go łas -- ka -- wym,
+    Swym_głosem:_siądź_mi \markup { \bold przy } _ bo -- ku pra -- wym.
+}
+\end{lilypond}
+
+% 1. Rzekł Pan do Pana \textbf{me}go łaskawym, \redcol{*} Swym głosem: siądź mi \textbf{przy} boku prawym.\\
+2. Aż Twoje wszystkie \textbf{zu}chwałe wrogi, \redcol{*} Dam za podnóżek \textbf{pod} Twoje nogi.\\
+3. Berło Twej mocy \textbf{wy}dam z Syjonu, \redcol{*} świat cały padnie \textbf{u} Twego tronu.\\
+4. A Ty używać \textbf{bę}dziesz praw swoich, \redcol{*} wśród nieprzyjaciół \textbf{pa}nując Twoich.\\
+5. Skoro rozpoczniesz \textbf{swe} panowanie, \redcol{*} przy Tobie lud Twój w \textbf{jas}ności stanie.\\
+6. Nim jeszcze zorzy \textbf{świe}cić kazałem, \redcol{*} Ciebie z wnętrzności \textbf{swo}ich wydałem.\\
+7. Pan to poprzysiągł, \textbf{Jego} zaś mowa \redcol{*} danego nigdy \textbf{nie} cofnie słowa.\\
+8. Ty jesteś kapłan \textbf{do} końca wieka, \redcol{*} według obrządku \textbf{Mel}chizedeka.\\
+9. Przy Twej prawicy \textbf{Pan} jest nad pany, \redcol{*} w dzień gniewu swego \textbf{ze}trze tyrany.\\
+10. Sąd swój rozciągnie \textbf{po} całym świecie \redcol{*} i nieposłuszne \textbf{na}rody zgniecie.\\
+11. Pyszną na ziemi \textbf{gło}wę poniży, \redcol{*} która Mu Jego \textbf{chwa}ły ubliży.\\
+12. Z mętnej po drodze \textbf{pić} będzie rzeki, \redcol{*} dlatego głowę \textbf{wznie}sie na wieki.\\
+13. Chwała bądź Bogu w Trójcy \textbf{Je}dynemu, \redcol{*} Ojcu, Synowi, Du\textbf{cho}wi Świętemu.\\
+14. Jak od początku była, \textbf{tak} i ninie, \redcol{*} I na wiek wieków \textbf{nie}chaj zawsze słynie.\\
+
+\proroctwo{Antyfona}
+
+\gregorioscore{Melody/an--pacificus_vocabitur--solesmes_1961.1.gabc}
+
+\medskip
+Książeciem pokoju nazwany będzie, a stolica Jego będzie umocniona na wieki.
+
+\proroctwo{Antyfona}
+
+\gregorioscore{Melody/an--regnum_ejus--solesmes_1961.1.gabc}
+
+\medskip
+Królestwo Jego Królestwo wieczne jest i wszystkie narodu służyć Mu będą i słuchać Go będą.
+
+\newpage
+\proroctwo{Psalm 110}
+
+\begin{lilypond}
+\relative c' {
+    \key f \major
+    \clef treble
+    \override Staff.TimeSignature.stencil = ##f
+    \override Staff.NoteHead.style = #'altdefault
+    \cadenzaOn
+    f\breve d8 d4 c4 \bar "|" \break
+    f\breve g8 a8 g4 f4 \bar "||"
+    \cadenzaOff
+}
+\addlyrics {
+    \override LyricText.font-size = #-1
+    Całym_Cię_sercem_chwalić_bę -- \markup { \bold dą, } Pa -- nie,
+    gdzie_rada_mędrców,_gdzie_ca -- \markup { \bold ły } zbór sta -- nie.
+}
+\end{lilypond}
+
+% 1. Całym Cię sercem chwalić bę\textbf{dę}, Panie, gdzie rada mędrców, gdzie ca\textbf{ły} zbór stanie.
+2. Wielkość niezmierna dzieł Boga \textbf{Ja}kuba, \redcol{*} Którymi władnie, jak Mu \textbf{się} podoba.\\
+3. Co pocznie, wszystko pełne jest \textbf{zac}ności, \redcol{*} Pełne uwielbień. Wiek spra\textbf{wie}dliwości.\\
+4. Jego nie przetrwa żaden, a \textbf{na} ziemi, \redcol{*} Wieczną pamiątkę sprawi \textbf{cu}dy Swymi.\\
+5. Pan dobrotliwy, Pan to mi\textbf{ło}sierny, \redcol{*} Karmi i hojnie boga\textbf{ci} lud wierny.\\
+6. Stateczny w słowie, co raz po\textbf{sta}nowił, \redcol{*} Wiecznymi czasy tego \textbf{nie} odmówił.\\
+7. Moc Swą okazał, gdy wygnał \textbf{po}gany, \redcol{*} A ten kraj synom Izra\textbf{e}la dany.\\
+8. Sprawy rąk Jego prawdą miar\textbf{ko}wane, \redcol{*} A zaś słusznością prawa \textbf{pro}stowane.\\
+9. Te się na wieki żadnych lat \textbf{nie} boją, \redcol{*} Bo na słuszności i na \textbf{praw}dzie stoją.\\
+10. Pan sługi Swoje z niewoli \textbf{wy}bawił, \redcol{*} I dla nich wieczny testa\textbf{ment} zostawił.\\
+11. Imię ma straszne i pełne \textbf{świę}tości, \redcol{*} A bojaźń Boża począt\textbf{kiem} mądrości.\\
+12. Ci, co z niej biorą wzór życia \textbf{na} ziemi, \redcol{*} Będą od wszystkich wiecznie \textbf{chwa}lonymi.\\
+13. Chwała bądź Bogu w Trójcy Je\textbf{dy}nemu, \redcol{*} Ojcu, Synowi, Ducho\textbf{wi} Świętemu.\\
+14. Jak od początku była, tak \textbf{i} ninie, \redcol{*} I na wiek wieków niechaj \textbf{zaw}sze słynie.\\
+
+\proroctwo{Antyfona}
+
+\gregorioscore{Melody/an--regnum_ejus--solesmes_1961.1.gabc}
+
+\medskip
+Królestwo Jego Królestwo wieczne jest i wszystkie narodu służyć Mu będą i słuchać Go będą.
+
+\newpage
+\proroctwo{Antyfona}
+
+\gregorioscore{Melody/an--ecce_vir_oriens--solesmes_1961.1.gabc}
+
+\medskip
+Oto mąż, a Wschód imię Jego, zasiądzie i zapanuje i pokój narodom opowie.
+
+\proroctwo{Psalm 111}
+
+\begin{lilypond}
+\relative c' {
+    \key f \major
+    \clef treble
+    \override Staff.TimeSignature.stencil = ##f
+    \override Staff.NoteHead.style = #'altdefault
+    \cadenzaOn
+    a'\breve g8 a8 bes4 bes4 \bar "|" \break
+    a\breve bes8 a8 g4 f4 \bar "||"
+    \cadenzaOff
+}
+\addlyrics {
+    \override LyricText.font-size = #-1
+    Szczęśliwy_i  \markup { \bold nie } zna kaź -- ni,
+    kto_w_Pańskiej_ży -- \markup { \bold je } bo -- jaż -- ni.
+}
+\end{lilypond}
+% 1. Szczęśliwy nie zna kaźni, \redcol{*} Kto w Pańskiej żyje bojaźni.\\
+2. Najmilsza je\textbf{mu} jest droga, \redcol{*} iść według przy\textbf{ka}zań Boga.\\
+3. Krew jego zac\textbf{na} na ziemi, \redcol{*} porówna zaw\textbf{żdy} z możnymi.\\
+4. Ród się cnotli\textbf{wych} rozpieni, \redcol{*} i będą bło\textbf{go}sławieni.\\
+5. Dom jego bę\textbf{dzie} obfity, \redcol{*} w zbiory i trwa\textbf{łe} zaszczyty.\\
+6. A cześć poczci\textbf{we}go człeka, \redcol{*} pójdzie od wie\textbf{ka} do wieka.\\
+7. Niechaj noc zać\textbf{mi} mgły swymi, \redcol{*} światło jest nad \textbf{cno}tliwymi.\\
+8. Zawsze im Pan \textbf{jest} życzliwy, \redcol{*} litosny i \textbf{spra}wiedliwy.\\
+9. Człek miły peł\textbf{en} wesela, \redcol{*} gdy drugiemu z swe\textbf{go} udziela.\\
+10. W słowie się swo\textbf{im} tak rządzi, \redcol{*} że, co wyrze\textbf{cze}, nie zbłądzi.\\
+11. Ludzka pamięć \textbf{jego} sprawy \redcol{*} uwieczni: „Był \textbf{to} mąż prawy”.\\
+12. I zły go ję\textbf{zyk} nie trwoży, \redcol{*} bezpieczny w nad\textbf{zie}i Bożej.\\
+13. Stateczność je\textbf{go} cnej duszy, \redcol{*} żadną się rze\textbf{czą} nie wzruszy.\\
+14. Wydoła złej \textbf{chwi}li snadnie, \redcol{*} aż nieprzyja\textbf{ciel} upadnie.\\
+15. Rozsypał swo\textbf{je} szczodroty, \redcol{*} na wdowy, bied\textbf{ne} sieroty.\\
+16. Przeto uczyn\textbf{no}ścią słynie, \redcol{*} i chwała je\textbf{go} nie zginie.\\
+17. Zły, na to pa\textbf{trząc}, boleje, \redcol{*} zgrzyta, z zazdro\textbf{ści} sinieje.\\
+18. Taki, co w gło\textbf{wie} uradzi, \redcol{*} do skutku nie \textbf{do}prowadzi.\\
+19. Chwała Ojcu \textbf{i} Synowi, \redcol{*} oraz Święte\textbf{mu} Duchowi.\\
+20. Jak na począ\textbf{tku}, tak ninie, \redcol{*} i na wieki \textbf{nie}chaj słynie.\\
+
+\proroctwo{Antyfona}
+
+\gregorioscore{Melody/an--ecce_vir_oriens--solesmes_1961.1.gabc}
+
+\medskip
+Oto mąż, a Wschód imię Jego, zasiądzie i zapanuje i pokój narodom opowie.
+
+\proroctwo{Antyfona}
+
+\gregorioscore{Melody/an--dominus_judex_noster--solesmes.gabc}
+
+\medskip
+Pan Sędzią naszym, Pan Prawodawcą naszym, Pan Królem naszym. Ten zbawi nas.
+
+\proroctwo{Psalm 112}
+
+\begin{lilypond}
+\relative c' {
+    \key g \major
+    \clef treble
+    \override Staff.TimeSignature.stencil = ##f
+    \override Staff.NoteHead.style = #'altdefault
+    \cadenzaOn
+    g'8 d\breve e8 fis8 g8([fis8]) e8 d8([c8]) b4 \bar "|" \break
+    a'\breve b8 c8 b8 a4 g4 \bar "||"
+    \cadenzaOff
+}
+\addlyrics {
+    \override LyricText.font-size = #-1
+    Chwal -- cie,_o_dziatki,  \markup { \bold Naj } -- wyż -- sze -- go Pa -- na.
+    Niech_Mu_jednemu_cześć \markup { \bold bę} -- dzie śpie -- wa -- na.
+}
+\end{lilypond}
+
+% 1. Chwalcie o dziatki, Najwyższego Pana, \redcol{*} niech Mu jednemu cześć będzie śpiewana.\\
+2. Niech Imię Pańskie \textbf{prze}błogosławione \redcol{*} po wszystkie wieki bę\textbf{dzie} uwielbione.\\
+3. Gdzie wschodzi słońce \textbf{i} kędy zapada, \redcol{*} niechaj świat Boską chwa\textbf{łę} opowiada.\\
+4. Pan ma narody \textbf{wszyst}kie pod nogami. \redcol{*} Jego się chwała wzno\textbf{si} nad gwiazdami.\\
+5. Kto się wżdy z Panem \textbf{tym} porówna, który \redcol{*} wysoko siedząc, z swej \textbf{nie}bieskiej góry.\\
+6. I co na niebie, \textbf{i} co jest na ziemi, \redcol{*} oczyma widzi nie\textbf{u}chronionymi.\\
+7. On ubogiego \textbf{z nę}dzy wyprowadzi \redcol{*} i z książętami na \textbf{ła}wie posadzi.\\
+8. On niesie radość \textbf{dla} niepłodnej matki, \redcol{*} miłe w jej domu roz\textbf{mna}żając dziatki.\\
+9. Chwała bądź Bogu \textbf{w Trój}cy jedynemu, \redcol{*} Ojcu, Synowi, Du\textbf{cho}wi Świętemu.\\
+10. Jak od początku \textbf{by}ła, tak i ninie, \redcol{*} I na wiek wieków nie\textbf{chaj} zawsze słynie.\\
+
+\proroctwo{Antyfona}
+
+\gregorioscore{Melody/an--dominus_judex_noster--solesmes.gabc}
+
+\medskip
+Pan Sędzią naszym, Pan Prawodawcą naszym, Pan Królem naszym. Ten zbawi nas.
+
+\proroctwo{Antyfona}
+
+\gregorioscore{Melody/an--ecce_dedi_te--solesmes_1961.1.gabc}
+
+\medskip
+Oto uczyniłem Cię światłością narodów, abyś był zbawieniem mojem aż na krańce ziemi.
+
+\proroctwo{Psalm 116}
+
+\begin{lilypond}
+\relative c' {
+    \key d \minor
+    \clef treble
+    \override Staff.TimeSignature.stencil = ##f
+    \override Staff.NoteHead.style = #'altdefault
+    \cadenzaOn
+    c'8 bes8 a8 a8 a8 a8 a8 bes8 a8 g4 f4 \bar "|" \break
+    g\breve a8([g8]) f8 e8 d4 \bar "||"
+    % bes'8 aes8 g\breve aes8 g8 f4 ees4 \bar "|" \break
+    % f\breve g8([f8]) ees8 d4 c4 \bar "||"
+    \cadenzaOff
+}
+\addlyrics {
+    \override LyricText.font-size = #-1
+    Bo -- ga na -- sze -- go chwal -- cie \markup { \bold wszyst } -- kie zie -- mie,
+    Daj_mu_cześć_winną_całe  \markup { \bold ludz } -- kie ple -- mię.
+}
+\end{lilypond}
+
+% 1. Boga naszego chwalcie \textbf{wszyst} kie ziemie, \redcol{*} Daj mu cześć winną całe \textbf{lu}dzkie plemię.\\
+2. Bo litość jego nad na\textbf{mi} stwierdzona, \redcol{*} A prawda Pańska wiecznie uiszczona.\\
+3. Chwała bądź Bogu w Trójcy \textbf{je}dynemu, \redcol{*} Ojcu, Synowi, Ducho\textbf{wi} Świętemu.\\
+4. Jak od początku była \textbf{tak} i ninie, \redcol{*} i na wiek wieków niechaj \textbf{zaw}sze słynie.\\
+
+\proroctwo{Antyfona}
+
+\gregorioscore{Melody/an--ecce_dedi_te--solesmes_1961.1.gabc}
+
+\medskip
+Oto uczyniłem Cię światłością narodów, abyś był zbawieniem mojem aż na krańce ziemi.
+
+\proroctwosigl{Kapitulum}{Kol 1:12-13}
+
+\oremuss{
+    Fratres: Grátias ágimus Deo Patri, 
+    qui dignos nos fecit in partem sortis sanctórum in lúmine, 
+    qui erípuit nos de potestáte tenebrárum, 
+    et tránstulit in regnum Fílii dilectiónis suæ.
+}{
+    Bracia: dzięki czynimy Bogu Ojcu, który nas godnymi uczynił dziedzictwa Świętych w światłości; 
+    który nas wyrwał z mocy ciemności i przeniósł w królestwo Syna umiłowanego Swego.
+}
+\oremuss{
+    \rr Deo grátias.
+}{
+    \rr Bogu niech będą dzięki.
+}
+
+\proroctwo{Hymn}
+
+% \grechangestaffsize{15}
+\gregorioscore{Melody/hy--te_saeculorum_principem--solesmes.gabc}
+% \grechangestaffsize{17}
+
+\bigskip
+\oremuss{
+    \textbf{1.} Ciebie, Książeciem wszystkich wieków,\\
+    Ciebie, narodów, Królem Chryste,\\
+    Ciebie też dusz i serc jedynym,\\
+    Wszechwładnym wyznawamy Panem.\\
+
+    \textbf{2.} Zbrodnicza tłuszcza woła:\\
+    Nie chcem, ażeby nami Chrystus władał!\\
+    My zaś obwołujemy, Panie,\\
+    Ciebie, najwyższym Królem wszystkich.\\
+
+    \textbf{3.} Książę pokoju Chryste, poddaj\\
+    Sobie umysły buntownicze,\\
+    A owce, co od Twej miłości\\
+    Odbiegły, zgromadź do owczarni.\\
+
+    \textbf{4.} Wszak potoś wisiał sam na krzyżu,\\
+    Potoś otworzył swe ramiona,\\
+    I włócznią ranę Ci zadano,\\
+    W której k'nam serce Twoje płonie
+}{
+    \textbf{5.} Dlatego kryjesz się w ołtarzu\\
+    Pod postaciami wina, chleba,\\
+    I z przebitego boku swego\\
+    Zlewasz na dzieci wybawienie.\\
+
+    \textbf{6.} Niechaj narodów wodze Tobie\\
+    Publiczne hołdy i cześć niosą,\\
+    Nauczyciele, sędzie, prawo\\
+    I sztuka niech Cię wyrażają.\\
+
+    \textbf{7.} Niechaj oznaki władzy królów\\
+    Tem błyszczą, że oddane Tobie,\\
+    Rządź słodkiem berłem Twem Ojczyzną,\\
+    Obywateli rządź domami.\\
+
+    \textbf{8.} Jezu, niech Tobie będzie chwała,\\
+    Który berłami świata władasz,\\
+    Z Ojcem i Duchem Świętym, Boże,\\
+    Przez wszystkie wieki wieków.\\
+    Amen.
+}
+
+\bigskip
+
+\gresetinitiallines{0}
+\gregorioscore{Melody/hy--te_saeculorum_principem--solesmes_1961.2.gabc}
+\gregorioscore{Melody/hy--te_saeculorum_principem--solesmes_1961.3.gabc}
+\gresetinitiallines{1}
+
+% \rr Et pacis non erit fi\textbf{nis}.
+
+\oremuss{}{
+\vv Panowanie Jego rozszerzy się.\\
+\rr A pokojowi nie będzie końca.
+}
+
+\newpage
+\proroctwo{Magnificat}
+
+\gregorioscore{Melody/an--habet_in_vestimento--solesmes_1961.1.gabc}
+
+\medskip
+Na szacie i na biodrze swojem ma napisane Król królów i Pan panujących. Jemu chwała i władza na wieki wieków.
+
+\bigskip
+
+\begin{lilypond}
+\relative c' {
+    \key f \major
+    \clef treble
+    \override Staff.TimeSignature.stencil = ##f
+    \override Staff.NoteHead.style = #'altdefault
+    \cadenzaOn
+    f\breve g8 g8 a8([g8]) f4 \bar "|" \break
+    f\breve e8 f8 d4 c4 \bar "|" \break
+    a'\breve g8 a8 bes4 bes4 \bar "|" \break
+    a\breve g8 f8 g4 f4 \bar "||"
+    \cadenzaOff
+}
+\addlyrics {
+    \override LyricText.font-size = #-1
+    Uwielbiaj,_duszo_moja,_sławę \markup { \bold Pa } -- na me -- go,
+    chwal_Boga_Stworzyciela_tak_bar -- \markup { \bold dzo } dob -- re -- go.
+    Bóg_mój,_zbawienie_moje,_jedy -- \markup { \bold na } o -- tu -- cha,
+    Bóg_mi_rozkoszą_serca_i_we -- \markup { \bold se } -- lem du -- cha.
+}
+\end{lilypond}
+
+% 1. Uwielbiaj, \ding{64} duszo moja, sławę \textbf{Pa}na mego, \redcol{*} Chwal Boga Stworzyciela tak bar\textbf{dzo} dobrego.\\
+% 2. Bóg mój, zbawienie moje, jedy\textbf{na} otucha, \redcol{*} Bóg mi rozkoszą serca i we\textbf{se}lem ducha.\\
+3. Bo mile przyjąć raczył swej słu\textbf{gi} pokorę, \redcol{*} łaskawym okiem wejrzał na Da\textbf{wi}da córę.\\
+4. Przeto wszystkie narody, co zie\textbf{mię} osiędą, \redcol{*} Odtąd błogosławioną mnie na\textbf{zy}wać będą.\\
+5. Bo wielkimi darami uczczo\textbf{nam} od Tego, \redcol{*} którego moc przedziwna, święte \textbf{I}mię Jego.\\
+6. Którzy się Pana boją, szczęśli\textbf{wi} na wieki, \redcol{*} bo z nimi miłosierdzie z rodu \textbf{w ród} daleki.\\
+7. Na cały świat pokazał moc swych \textbf{ra}mion świętych, \redcol{*} rozproszył dumne myśli głów py\textbf{chą} nadętych.\\
+8. Wyniosłych złożył z tronu, znikczem\textbf{nił} wielmożne, \redcol{*} wywyższył, uwielmożnił w poko\textbf{rę} zamożne.\\
+9. Głodnych nasycił, hojnie i w dob\textbf{ra} spanoszył, \redcol{*} bogaczów z torbą puścił i nędz\textbf{nie} rozproszył.\\
+10. Przyjął do łaski sługę Izra\textbf{e}la cnego, \redcol{*} wspomniał nań, użyczył mu miło\textbf{sier}dzia swego.\\
+11. Wypełnił, co był przyrzekł niegdyś \textbf{oj}com naszym: \redcol{*} Abrahamowi z potomstwem, jego \textbf{wiecz}nym czasem.\\
+{\footnotesize\color{red}{\textbf{Improwizacja organowa do czasu, aż turyfer powróci od okadzenia ludu.}}}\\
+12. Wszyscy śpiewajmy Bogu w Trójcy \textbf{Je}dynemu, \redcol{*} Chwała Ojcu, Synowi, Ducho\textbf{wi} Świętemu.\\
+13. Jak była na początku, tak zaw\textbf{sze} niech będzie, \redcol{*} teraz i na wiek wieków niechaj \textbf{sły}nie wszędzie.\\
+
+\gregorioscore{Melody/an--habet_in_vestimento--solesmes_1961.1.gabc}
+
+\medskip
+Na szacie i na biodrze swojem ma napisane Król królów i Pan panujących. Jemu chwała i władza na wieki wieków.
+
+\proroctwomedskip{Oracja}
+
+\oremuss{
+    \vv Dominus vobiscum.
+}{
+    \vv Pan z wami.
+}
+\oremuss{
+    \rr Et cum spiritu tuo.
+}{
+    \rr I z duchem twoim.
+}
+\oremuss{
+    Orémus. Omnípotens sempitérne Deus, qui in dilécto Fílio tuo, universórum Rege, ómnia instauráre voluísti:
+    concéde propítius; ut cunctæ famíliæ géntium, peccáti vúlnere disgregátæ, eius suavíssimo subdántur império:
+    Qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum.
+}{
+    Módlmy się. Wszechmogący wieczny Boże, który przez ukochanego Syna swego, Króla wszechświata, 
+    wszystko odnowić postanowiłeś spraw miłościwie, by wszystkie rodziny narodów, 
+    wskutek ran grzechowych rozdzielone, poddały się Jego najsłodszemu Panowaniu.
+    Który z Tobą żyje i króluje w jedności Ducha Świętego Bóg przez wszystkie wieki wieków.
+}
+\oremuss{
+    \rr Amen.
+}{
+    \rr Amen.
+}
+
+
+\proroctwo{Zakończenie}
+
+\oremuss{
+    \vv Dominus vobiscum.
+}{
+    \vv Pan z wami.
+}
+\oremuss{
+    \rr Et cum spiritu tuo.
+}{
+    \rr I z duchem twoim.
+}
+
+% \vv Benedicamus Domino.
+
+% \rr Deo gratias.
+
+\gresetinitiallines{0}
+% \grecommentary[0.1cm]{Orbis Factor (XI)}
+\gregorioscore{Melody/or--benedicamus_domino_i_classis_in_ii_vesperis_mode_5--solesmes_1961.1.gabc}
+\gresetinitiallines{1}
+
+\medskip
+\oremuss{}{
+\vv Błogosławmy Panu.\\
+\rr Bogu niech będą dzięki.
+}
+\oremuss{
+    \vv Fidelium animae per misericordiam Dei requiescant in pace.
+}{
+    \rr Dusze wiernych zmarłych przez miłosierdzie Boże niech odpoczywają w pokoju.
+}
+\oremuss{
+    \rr Amen.
+}{
+    \rr Amen.
+}
+
+
+\proroctwo{Antyfona}
+
+\gregorioscore{Melody/an--salve_regina_simplex-solesmes.1.gabc}
+
+\vfill
+
+\centerline{\pgfornament[width=3cm]{162}}
+
+\vfill
+
+\newpage
+
+\thispagestyle{empty}
+
+\vfill
+
+\begin{tikzpicture}[color=black,
+every node/.style={inner sep=0pt}]
+\node[minimum width=12.8cm, minimum height=18.0cm] (vecbox) at (current page.center) {};
+\node[align=center, text width=10cm, inner sep=10pt] at (vecbox.center) {%
+    {\Large \textbf{A. M. D. G.}}\\[1em]
+};
+\end{tikzpicture}
+
+\vfill
+
+\end{document}
